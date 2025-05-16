@@ -1,0 +1,40 @@
+{
+  "name": "@eklabdev/loggerts4",
+  "version": "1.0.1",
+  "description": "A modular and extensible TypeScript logging library with stage 2 decorators",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EklabDev/loggerts4"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "typescript",
+    "logging",
+    "logger",
+    "decorators",
+    "stage2"
+  ],
+  "author": "EKLab",
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^9.26.0",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.24",
+    "@typescript-eslint/eslint-plugin": "^7.1.0",
+    "@typescript-eslint/parser": "^7.1.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.2.5",
+    "ts-jest": "^29.1.2",
+    "typescript": ">=5.0.0"
+  },
+  "peerDependencies": {
+    "typescript": ">=5.0.0"
+  }
+}
