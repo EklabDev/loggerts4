@@ -1,6 +1,6 @@
 {
   "name": "@eklabdev/loggerts4",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A modular and extensible TypeScript logging library with stage 2 decorators",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
