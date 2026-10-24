@@ -1,8 +1,10 @@
 import { Logger } from '../core/Logger';
 import { LogOptions } from '../types';
 
-export function LogClass(logger: Logger, metadata?: Record<string, any>) {
-  return function decorate(target: any) {
+type Constructor<T = object> = new (...args: any[]) => T;
+
+export function LogClass<T extends Constructor>(logger: Logger, metadata?: Record<string, any>) {
+  return function decorate(target: T): T {
     return class extends target {
       constructor(...args: any[]) {
         super(...args);
@@ -10,7 +12,7 @@ export function LogClass(logger: Logger, metadata?: Record<string, any>) {
       _logger = logger;
       _originalClass = target;
       _metadata = metadata;
-    };
+    } as T;
   };
 }
 
